@@ -1,0 +1,11 @@
+[project]
+name = "autoslowmode"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "hikari>=2.2.0",
+    "hikari-arc>=2.0.0",
+    "jax>=0.5.3 ; sys_platform == 'darwin' or sys_platform == 'linux'",
+]
