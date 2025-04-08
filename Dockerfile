@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install UV using the official installation method
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+# Install UV directly using pip
+RUN pip install uv
 
 # Copy project files
 COPY pyproject.toml uv.lock ./
@@ -23,7 +23,7 @@ RUN mkdir -p /data
 ENV DATABASE_PATH=/data/auto_slowmode.db
 
 # Sync dependencies using UV
-RUN /root/.cargo/bin/uv sync
+RUN uv sync
 
 # Run the bot using UV
-CMD ["/root/.cargo/bin/uv", "run", "bot.py"]
+CMD ["uv", "run", "bot.py"]
