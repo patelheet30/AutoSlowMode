@@ -21,8 +21,8 @@ A Discord bot that automatically sets slowmode on channels based on message acti
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/auto-slowmode-bot.git
-   cd auto-slowmode-bot
+   git clone https://github.com/patelheet30/serenity.git
+   cd serenity
    ```
 
 2. Install dependencies:
