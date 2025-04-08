@@ -1,4 +1,4 @@
-# Auto-Slowmode Discord Bot
+# Serenity Discord Bot
 
 A Discord bot that automatically sets slowmode on channels based on message activity.
 
