@@ -1,6 +1,7 @@
 import logging
+import os
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import aiosqlite
 import arc
@@ -9,10 +10,12 @@ logger = logging.getLogger("db")
 
 
 class Database:
-    def __init__(self, db_path: str = "data/auto_slowmode.db"):
-        self.db_path = db_path
+    def __init__(self, db_path: Optional[str] = None):
+        self.db_path = db_path or os.environ.get(
+            "DATABASE_PATH", "data/auto_slowmode.db"
+        )
 
-        Path(db_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
 
     async def init(self) -> None:
         self.connection = await aiosqlite.connect(self.db_path)

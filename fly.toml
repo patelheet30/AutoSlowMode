@@ -1,0 +1,19 @@
+app = "auto-slowmode-bot"
+primary_region = "lhr"
+
+[build]
+
+[env]
+
+[mounts]
+  source = "auto_slowmode_data"
+  destination = "/data"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20
