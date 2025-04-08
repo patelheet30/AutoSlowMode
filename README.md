@@ -2,6 +2,8 @@
 
 A Discord bot that automatically sets slowmode on channels based on message activity.
 
+[Invite the Bot here](https://discord.com/oauth2/authorize?client_id=1359250509009260604&permissions=3120&integration_type=0&scope=bot+applications.commands)
+
 ## Features
 
 - Automatically adjust slowmode settings based on channel activity
